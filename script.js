@@ -3,6 +3,7 @@ var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
 var button = document.getElementById("button");
+const color = "#";
 
 function setGradient() {
 	body.style.background = 
@@ -11,37 +12,27 @@ function setGradient() {
 	 + ", " 
 	 + color2.value 
 	 + ")";
-
 	 css.textContent = body.style.background + ";";
 }
 
 function randomColor() {
-	const color = "#";
-	let red = 0;
-	let blue = 0;
-	let green = 0;
-	red = Math.floor(Math.random() * 99);
-	blue = Math.floor(Math.random() * 99);
-	green = Math.floor(Math.random() * 99);
-	color1.value = color + red + blue + green;
+	let hex = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+	let hexColor = [];
+	let hexColor1 = [];
+	for (var i=0; i<6; i++)
+	{
+		hexColor.push(hex[Math.floor(Math.random() * hex.length)]);
+		hexColor1.push(hex[Math.floor(Math.random() * hex.length)]);
+
+	}
+	color1.value = color + hexColor.join("");
+	color2.value = color + hexColor1.join("");
 	setGradient();
 }
 
-function randomColor1() {
-	const color = "#";
-	let red = 0;
-	let blue = 0;
-	let green = 0;
-	red = Math.floor(Math.random() * 99);
-	blue = Math.floor(Math.random() * 99);
-	green = Math.floor(Math.random() * 99);
-	color2.value = color + red + blue + green;
-	setGradient();
-}
 
 function fireFunctions(){
 	randomColor();
-	randomColor1();
 }
 
 	console.log(color1.value);
