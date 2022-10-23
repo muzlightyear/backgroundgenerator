@@ -5,7 +5,7 @@ body {
 	text-transform: uppercase;
 	leter-spacing: .5em;
 	top: 15%;
-	background: linear-gradient(to right, red, yellow);
+	background: linear-gradient(to right, rgb(211, 198, 100), rgb(186, 211, 202));
 }
 
 h1 {
@@ -26,5 +26,5 @@ h3 {
 }
 
 #button {
-
+background: linear-gradient(to right, rgb(68, 198, 49), rgb(64, 152, 212));
 }
